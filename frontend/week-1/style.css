@@ -1,0 +1,99 @@
+body{
+    margin:0;
+    background-image: radial-gradient(circle, #0085FF 0%, #003465 100%);
+    box-sizing: border-box;
+    
+}
+.poppins{
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+
+}
+.flexbox{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+
+}
+.rectangle{
+
+    background:rgba(88, 130, 193,0.28) ;
+    -webkit-backdrop-filter: blur(3px);
+    width: 500px;
+    height: 500px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255,0.11);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+   
+    
+}
+.content{
+    width:70%;
+    height:80%;
+    color:white;
+  
+
+}
+
+.blue{
+   
+    background-color: #003465;
+    width:100%;
+    border-radius: 5px;
+    padding:4px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color: aliceblue;
+    
+}
+.margin{
+    margin-bottom:12px;
+}
+.head1{
+  
+  font-size: 30px;
+  font-weight:600;
+
+
+}
+
+
+
+.head2{
+    font-size: 18px;
+
+}
+.head3{
+    font-size:14px;
+}
+.alt-option{
+    font-size:14px;
+    display: flex;
+    justify-content: space-around;
+    margin:auto;
+    align-items: center;
+    padding:5%;
+    
+
+}
+input{
+    width:100%;
+    border-radius: 5px;
+    padding:4px;
+    height:20px;    
+
+}
+div .button{
+    display: inline-flex;
+    background-color: aliceblue;
+    padding:4px;
+    width:30%;
+    border-radius:5px;
+}
