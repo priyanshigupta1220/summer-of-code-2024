@@ -1,6 +1,9 @@
 body{
+    
     margin:0;
-    background-image: radial-gradient(circle, #0085FF 0%, #003465 100%);
+    
+    background: linear-gradient(287.56deg, #0F0C29 0%, #302B63 50%, #24243E 100%);
+
     box-sizing: border-box;
     
 }
@@ -10,6 +13,9 @@ body{
 
 }
 .flexbox{
+    z-index: 1;
+    
+    
     display:flex;
     justify-content: center;
     align-items: center;
@@ -18,13 +24,13 @@ body{
 
 }
 .rectangle{
-
-    background:rgba(88, 130, 193,0.28) ;
+    position: fixed;
+    background:rgba(255, 255, 255,0.1) ;
     -webkit-backdrop-filter: blur(3px);
     width: 500px;
     height: 500px;
     border-radius: 25px;
-    border: 2px solid rgba(255, 255, 255,0.11);
+    border: 2px solid rgba(255, 255, 255,0.50);
     box-shadow: 0 4px 30px rgba(0,0,0,0.1);
     display:flex;
     justify-content: center;
@@ -43,14 +49,14 @@ body{
 
 .blue{
    
-    background-color: #003465;
+    background-color: #ff1170;
     width:100%;
     border-radius: 5px;
     padding:4px;
     display:flex;
     justify-content:center;
     align-items:center;
-    color: aliceblue;
+    color: rgb(255, 255, 255);
     
 }
 .margin{
@@ -72,16 +78,22 @@ body{
 }
 .head3{
     font-size:14px;
+    
+}
+.head3 a{
+    color: white;
 }
 .alt-option{
     font-size:14px;
     display: flex;
     justify-content: space-around;
-    margin:auto;
-    align-items: center;
-    padding:5%;
     
 
+}
+.center{
+    display: flex;
+    justify-content: center;
+    
 }
 input{
     width:100%;
@@ -91,9 +103,108 @@ input{
 
 }
 div .button{
-    display: inline-flex;
-    background-color: aliceblue;
-    padding:4px;
-    width:30%;
+    display:inline-flex;
+    background-color: white;
+    padding-top: 4px;
     border-radius:5px;
+    min-width:90px;
+    margin: 8px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.icon{
+    height: 22px;
+}
+
+.grp{
+    position: fixed;
+    height:50% ;
+    top: 10%;
+    left: 55%;
+    z-index: -1;
+    
+}
+
+
+
+.grp1{
+    position: fixed;
+    width: 15%;
+    top: 0%;
+    left: 20%;
+    z-index: -1;
+   
+    
+
+}
+.grp2{
+    
+    position: fixed;
+    height: 30%;
+    top: 60%;
+    left: 25%;
+    gap: 0px;
+    opacity: 0px;
+    z-index: -1;
+
+    
+}
+.grp3{
+    position: fixed;
+    height: 10%;
+    
+    top: 75%;
+    left: 25%;
+    gap: 0px;
+    opacity: 0px;
+    z-index: -1;
+
+}
+.grp4{
+    position: fixed;
+    height:11%;
+    top:20%;
+    left:25%;
+    z-index: -1;
+   
+}
+.grp5{
+    position: fixed;
+    height:5%;
+    top:70%;
+    left:65%;
+    z-index: -1;
+  
+}
+.grp6{
+    position: fixed;
+    height: 8%;
+    top:75%;
+    left:68%;
+    z-index: -1;
+   
+}
+.grp7{
+    position: fixed;
+    height:40%;
+    top: 60%;
+    left:0%;
+    z-index: -1;
+
+}
+.grp8{
+    position: fixed;
+    right: 0%;
+    bottom: 0%;
+    height: 18%;
+    z-index: -1;
+
+}
+.grp9{
+    position: fixed;
+    height:10%;
+    top:32%;
+    left:22%;
+    z-index: -1;
 }
