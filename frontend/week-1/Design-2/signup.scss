@@ -1,0 +1,132 @@
+
+
+
+body{
+    margin: 0;
+}
+.poppins{
+    font-family:"Poppins", sans-serif;
+    font-weight: 400;
+
+}
+.outer{
+    padding: 0%;
+}
+.images{
+    width:50%;
+    max-width: 300px;
+}
+@media (max-width:992px){
+    .image{
+        display:none;
+    }
+}
+
+.welcome{
+    background-image:linear-gradient(241deg, rgba(27,208,255,1) 0%, rgba(140,236,255,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items:center;
+   
+}
+.flexbox{
+    z-index: 1;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:100vh;
+
+
+}
+.rectangle{
+    position: fixed;
+    background-image:linear-gradient(241deg, rgba(27,208,255,0.8) 0%, rgba(140,236,255,0.8) 100%) ;
+    -webkit-backdrop-filter: blur(3px);
+    width: 32%;
+    height: 32vw;
+    min-width: 380px;
+    min-height: 380px;
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255,0.50);
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content: center;
+    padding-top: 5%;
+    //align-items: center;
+
+   
+    
+}
+.content{
+    width:65%;
+    height:75%;
+    color:rgb(0, 0, 0);
+  
+
+}
+
+.blue{
+   
+    background-color: rgb(55, 23, 170);
+    width:100%;
+    border-radius: 5px;
+    padding:4px;
+    display:flex;
+    height:25px;
+    justify-content:center;
+    align-items:center;
+    color: rgb(255, 255, 255);
+    
+}
+
+
+.margin{
+    margin-bottom:1%;
+}
+.head1{
+  font-size: 1.6rem;
+  font-weight:600;
+}
+
+.head2{
+    font-size: 0.9rem;
+
+
+}
+.head3{
+    font-size:0.60rem;
+    
+}
+.head3 a{
+    color: rgb(0, 0, 0);
+}
+.alt-option{
+    font-size:14px;
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+.center{
+    display: flex;
+    justify-content: center;
+    
+}
+input{
+    width:100%;
+    border-radius: 5px;
+    padding:4px;
+    height:20px;    
+
+}
+div .button{
+    display:inline-flex;
+    background-color: white;
+    padding-top: 4px;
+    border-radius:5px;
+    min-width:90px;
+    margin: 8px;
+    justify-content: center;
+    align-items: center;
+    
+}

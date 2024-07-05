@@ -60,11 +60,11 @@ body{
     
 }
 .margin{
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 .head1{
   
-  font-size: 30px;
+  font-size: 28px;
   font-weight:600;
 
 
@@ -73,11 +73,11 @@ body{
 
 
 .head2{
-    font-size: 18px;
+    font-size: 16px;
 
 }
 .head3{
-    font-size:14px;
+    font-size:13px;
     
 }
 .head3 a{
@@ -119,8 +119,8 @@ div .button{
 
 .grp{
     position: fixed;
-    height:50% ;
-    top: 10%;
+    width:30% ;
+    top: 50px;
     left: 55%;
     z-index: -1;
     
@@ -141,8 +141,8 @@ div .button{
 .grp2{
     
     position: fixed;
-    height: 30%;
-    top: 60%;
+    width: 15%;
+    bottom: 70px;
     left: 25%;
     gap: 0px;
     opacity: 0px;
@@ -152,9 +152,9 @@ div .button{
 }
 .grp3{
     position: fixed;
-    height: 10%;
+    width: 8%;
     
-    top: 75%;
+    bottom:100px;
     left: 25%;
     gap: 0px;
     opacity: 0px;
@@ -163,23 +163,23 @@ div .button{
 }
 .grp4{
     position: fixed;
-    height:11%;
-    top:20%;
-    left:25%;
-    z-index: 3;
+    width:8%;
+    top:150px;
+    left:26%;
+    z-index: -1;
    
 }
 .grp5{
     position: fixed;
-    height:5%;
+    width:8%;
     top:70%;
     left:65%;
-    z-index: 3;
+    z-index: -1;
   
 }
 .grp6{
     position: fixed;
-    height: 8%;
+    width: 10%;
     top:75%;
     left:68%;
     z-index: -1;
@@ -187,24 +187,26 @@ div .button{
 }
 .grp7{
     position: fixed;
-    height:40%;
-    top: 60%;
-    left:0%;
+    width:20%;
+
+    left:0px;
+    bottom:0px;
     z-index: -1;
 
 }
 .grp8{
     position: fixed;
-    right: 0%;
-    bottom: 0%;
-    height: 18%;
+    right: 0px;
+    bottom: 0px;
+    width: 12%;
     z-index: -1;
 
 }
 .grp9{
     position: fixed;
-    height:10%;
-    top:32%;
+    background-attachment: fixed;
+    width:8%;
+    top:210px;
     left:22%;
     z-index: -1;
 }
