@@ -4,9 +4,11 @@ from flask_migrate import Migrate
 from possystem.database import db
 import psycopg2
 import os
-from .admin import routes
+from .staff import routes
 from .products import routes
-from .cashier import routes
+from .customer import routes
+from .transaction import routes
+from flask_login import UserMixin,login_user,LoginManager,login_required,logout_user,current_user
 
 
 def create_app():
@@ -17,9 +19,10 @@ def create_app():
 
     )
 
-    app.register_blueprint(admin.routes.admin_bp)
+    app.register_blueprint(staff.routes.staff_bp)
     app.register_blueprint(products.routes.product_bp)
-    app.register_blueprint(cashier.routes.cashier_bp)
+    app.register_blueprint(customer.routes.customer_bp)
+    app.register_blueprint(transaction.routes.transaction_bp)
 
     
 

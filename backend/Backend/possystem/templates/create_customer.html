@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product</title>
+</head>
+<body>
+    <form  method="POST">
+        {{form.hidden_tag()}}
+        <b>{{form.c_name.label}}</b>   {{form.c_name()}}
+        <br>
+        <b>{{form.c_email.label}}</b>   {{form.c_email()}}
+        <br>
+        <b>{{form.c_contact.label}}</b>   {{form.c_contact()}}
+        <br>
+    
+
+        {{ form.submit() }}
+
+    </form>
+    
+</body>
+</html>

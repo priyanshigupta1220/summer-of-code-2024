@@ -1,7 +1,9 @@
 from possystem.database import db
+
+
 class InventoryItem(db.Model):
     __tablename__="inventoryitem"
-    item_SKU=db.Column(db.String,primary_key=True)
+    item_sku=db.Column(db.Integer,primary_key=True,autoincrement=True)
     item_name=db.Column(db.String(100),unique=True,nullable=False)
     item_desc=db.Column(db.String(255))
     item_price=db.Column(db.Integer,nullable=False)
@@ -15,4 +17,4 @@ class InventoryItem(db.Model):
         self.item_qty=item_qty
 
     def __repr__(self):
-        return f"<InventoryItem {self,self.item_name}>"
+        return f"<InventoryItem {self.item_sku,self.item_name}>"
