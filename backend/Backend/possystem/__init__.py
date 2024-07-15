@@ -5,6 +5,7 @@ from possystem.database import db
 import psycopg2
 import os
 from .staff import routes
+from .login import routes
 from .products import routes
 from .customer import routes
 from .transaction import routes
@@ -23,8 +24,7 @@ def create_app():
     app.register_blueprint(products.routes.product_bp)
     app.register_blueprint(customer.routes.customer_bp)
     app.register_blueprint(transaction.routes.transaction_bp)
-
-    
+    app.register_blueprint(login.routes.login_bp)
 
     db.init_app(app)
     from possystem.models.customer import Customer
@@ -32,8 +32,5 @@ def create_app():
     from possystem.models.staff import Staff
     from possystem.models.transactions import Transaction
     migrate=Migrate(app,db)
-
-   
-
 
     return app

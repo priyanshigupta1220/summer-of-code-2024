@@ -39,10 +39,9 @@ def add_product():
         desc=form.item_desc.data
         price=form.item_price.data
         qty=form.item_qty.data
-         
-        q="INSERT INTO inventoryitem(item_name,item_desc,item_price,item_qty) VALUES (1,2,3,4)"   
+        q="INSERT INTO inventoryitem(item_name,item_desc,item_price,item_qty) VALUES (name,desc,price,qty)"   
         cursor.execute(q)
-        print(name,desc,price,qty)
+        cursor.commit()
         return "Product Added"
     return render_template('create_product.html',form=form)
 

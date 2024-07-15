@@ -2,7 +2,9 @@ from flask import Flask,Blueprint,jsonify,request,render_template,make_response,
 from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField,PasswordField,BooleanField
 from wtforms.validators import InputRequired,Length,Regexp
-from possystem.database import cursor
+from possystem.database import cursor,db
+from possystem.models.staff import Staff
+
 staff_bp=Blueprint('staff_bp',__name__,template_folder='templates',static_folder='static')
 
 class createstaff(FlaskForm):
@@ -44,13 +46,9 @@ def create_staff():
         adm=form.s_isadmin.data
         approve=form.s_isapproved.data
         contact=form.s_contact.data
-        session["s_name"]=form.s_name.data
-        session["s_email"]=form.s_email.data
-        session["password"]=form.password.data
-        session["s_isadmin"]=form.s_isadmin.data
-        session["s_isapproved"]=form.s_isapproved.data
-        session["s_contact"]=form.s_contact.data
-        q="INSERT INTO staff(s_name,s_email,password,s_isadmin,s_isapproved,s_contact) VALUES (name,email,pwd,adm,approve,contact)"   
+        new_user=Staff(s_id=2,s_name=name,s_email=email,password=pwd,s_isadmin=adm,s_isapproved=approve,s_contact=contact,s_isdeleted=0)
+        db.session.add(new_user)
+        db.session.commit()
         return "Staff Created"
     return render_template('create_staff.html',form=form)
 
