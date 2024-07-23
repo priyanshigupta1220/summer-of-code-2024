@@ -3,6 +3,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,IntegerField,SubmitField,TextAreaField,PasswordField,BooleanField,FloatField
 from wtforms.validators import InputRequired,Length,Regexp
 from possystem.database import cursor
+from possystem.models.inventory import InventoryItem
+from possystem.database import db
 
 product_bp=Blueprint('product_bp',__name__,template_folder='templates',static_folder='static')
 
@@ -39,9 +41,9 @@ def add_product():
         desc=form.item_desc.data
         price=form.item_price.data
         qty=form.item_qty.data
-        q="INSERT INTO inventoryitem(item_name,item_desc,item_price,item_qty) VALUES (name,desc,price,qty)"   
-        cursor.execute(q)
-        cursor.commit()
+        new_prod=InventoryItem(item_sku=1,item_name=name,item_desc=desc,item_price=price,item_qty=qty)
+        db.session.add(new_prod)
+        db.session.commit()
         return "Product Added"
     return render_template('create_product.html',form=form)
 

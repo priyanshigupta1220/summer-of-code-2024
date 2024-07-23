@@ -3,6 +3,8 @@ from flask_wtf import FlaskForm
 from wtforms import StringField,SubmitField,PasswordField,BooleanField
 from wtforms.validators import InputRequired,Length,Regexp
 from possystem.database import cursor
+from possystem.models.customer import Customer
+from possystem.database import db
 customer_bp=Blueprint('customer_bp',__name__,template_folder='templates',static_folder='static')
 
 class createcustomer(FlaskForm):
@@ -40,9 +42,9 @@ def create_customer():
         name=form.c_name.data
         email=form.c_email.data
         contact=form.c_contact.data
-        
-        q="INSERT INTO customer(c_name,c_email,c_contact) VALUES (1,2,3)" 
-        cursor.execute(q)  
+        new_cust=Customer(c_id=1,c_name=name,c_email=email,c_contact=contact)
+        db.session.add(new_cust)
+        db.session.commit()
         
         return redirect(url_for(""))
     return render_template('create_customer.html',form=form)

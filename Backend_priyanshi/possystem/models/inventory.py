@@ -10,7 +10,8 @@ class InventoryItem(db.Model):
     item_qty=db.Column(db.Integer,nullable=False)
 
     
-    def __init__(self,item_name,item_desc,item_price,item_qty):
+    def __init__(self,item_sku,item_name,item_desc,item_price,item_qty):
+        self.item_sku=item_sku
         self.item_name=item_name
         self.item_desc=item_desc
         self.item_price=item_price
